@@ -1,0 +1,16 @@
+<h1>{{title}}</h1>
+<p>Welcome to {{title}}</p>
+
+<ul>
+	New York
+	{{#each ny}}
+		<li><span>{{this.address}}</span></li>
+	{{/each}}
+</ul>
+
+<ul>
+	Los Angeles
+	{{#each ca}}
+		<li><span>{{this.address}}</span></li>
+	{{/each}}
+</ul>
