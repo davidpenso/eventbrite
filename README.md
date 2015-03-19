@@ -1,2 +1,0 @@
-# eventbrite
-Event Brite project
