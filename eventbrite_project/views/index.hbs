@@ -1,16 +1,49 @@
-<h1>{{title}}</h1>
-<p>Welcome to {{title}}</p>
 
-<ul>
-	New York
-	{{#each ny}}
-		<li><span>{{this.address}}</span></li>
-	{{/each}}
-</ul>
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>EventBrite</title>
 
-<ul>
-	Los Angeles
-	{{#each ca}}
-		<li><span>{{this.address}}</span></li>
-	{{/each}}
-</ul>
+	</head>
+
+	<body>
+		<h1>Eventbrite</h1>
+		
+
+		<h3>New York</h3>
+
+
+			
+			{{#each ny}}
+				{{#if this.address}}
+					<div class="newyork">{{this.name}}<br><br> {{this.address}}</div>
+				{{else}}
+
+				{{/if}}
+			{{/each}}
+
+		<br>
+		<br>
+		<br>
+		<h2>San Fransisco</h2>
+		<div id="container">
+
+			<div class="cube">
+			
+			{{#each ca}}
+				<div class="front"><br><br><br>Event Name:<br> {{this.name}}</div>
+				<div class="back"><br><br><br>Event Address:<br> {{this.address}}</div>
+				<div class="top"></div>
+				<div class="bottom"></div>	
+				<div class="left"><br><br><br> Event City:<br>{{this.city}}</div>
+			{{/each}}
+				<div class="right"><br><br><br> Event Date:<br>{{date}}</div>
+			</div> 
+		</div>
+
+		
+
+	</body>
+
+</html>
